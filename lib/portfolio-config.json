@@ -2,21 +2,21 @@
   "profile": {
     "name": "Ando Data Analyst",
     "role": "Data Analyst",
-    "tagline": "Your tagline goes here — a short sentence about what you do and what drives you.",
+    "tagline": "Your tagline goes here â a short sentence about what you do and what drives you.",
     "email": "your.email@example.com",
     "phone": "0414000000",
     "location": "Melbourne, AU",
     "linkedin": "",
     "github": "https://github.com/andoproductionsdata",
-    "photoUrl": "/profile-photo.jpeg",
-    "resumeUrl": "/resume.pdf",
+    "photoUrl": "/placeholder.svg",
+    "resumeUrl": "/resume-placeholder.pdf",
     "openToWork": true,
     "availability": "Available for contract & full-time roles"
   },
   "about": {
     "bio": "Write a short paragraph about your background, experience, and what makes you a strong data professional.",
     "focus": "Data Analytics & Business Intelligence",
-    "coreStack": "SQL · Power BI · Python"
+    "coreStack": "SQL Â· Power BI Â· Python"
   },
   "technicalSkills": [
     {
@@ -70,11 +70,6 @@
       "logo": "/logo-redshift.png"
     },
     {
-      "name": "Salesforce",
-      "description": "CRM data analysis, reporting, pipeline and sales insights",
-      "logo": "/logo-salesforce.png"
-    },
-    {
       "name": "Jira",
       "description": "Project tracking, agile workflows, sprint reporting",
       "logo": "/logo-jira.png"
@@ -86,7 +81,7 @@
       "title": "Senior Data Analyst",
       "company": "Apex Analytics Group",
       "location": "",
-      "duration": "Jan 2023 — Presen",
+      "duration": "Jan 2023 â Presen",
       "type": "Full-time",
       "responsibilities": [
         "Lead the design and delivery of enterprise-wide Power BI dashboards used by 200+ stakeholders across operations, finance, and sales.",
@@ -113,7 +108,7 @@
       "role": "Data Analyst",
       "duration": "",
       "summary": "This project simulates a real-world contact center for Energy Plus, a fictional electricity provider. The business relied on manual spreadsheets and inconsistent reporting, making it difficult for leadership to monitor operational performance, sales activity, service levels, and agent productivity.\n\nTo solve this, the objective was to design and build an interactive KPI dashboard that provides clear visibility into contact center performance, supports data-driven decision-making, and helps identify opportunities to improve efficiency, customer service, and sales outcomes.",
-      "preview": "/project-contact-center-kpi-performance-project-thumb.png",
+      "preview": "/placeholder.svg",
       "challenge": [
         "This project simulates a real-world contact center for Energy Plus, a fictional electricity provider. The business relied on manual spreadsheets and inconsistent reporting, making it difficult for leadership to monitor operational performance, sales activity, service levels, and agent productivity.\n\nTo solve this, the objective was to design and build an interactive KPI dashboard that provides clear visibility into contact center performance, supports data-driven decision-making, and helps identify opportunities to improve efficiency, customer service, and sales outcomes."
       ],
@@ -139,35 +134,35 @@
           "description": [
             "This page serves as a reference point for stakeholders, providing essential context and definitions for the dashboard. It includes key metadata such as the report creation date, last review date, business owner, and report owner. A brief summary explains the purpose and scope of the report, helping users quickly understand what it covers.\n\nKey Performance Indicators (KPIs) are also listed on this page, drawn directly from the project requirements, to give managers a clear understanding of the metrics being tracked. Additionally, a glossary has been included to define key terms and metrics, supporting consistent interpretation across all users."
           ],
-          "image": "/project-contact-center-kpi-performance-project-slide-1.png"
+          "image": ""
         },
         {
           "title": "Contact Centre Operations",
           "description": [
             "This page provides senior managers and executives with a high-level view of contact centre performance throughout the year, making it easy to assess whether key monthly targets are being achieved.\n\nThe primary focus is the Connection KPI (target: 1,800 connections per month) and Service Level (target: 75%). Colour-coded KPIs provide instant insight, with green indicating targets have been met and red highlighting areas requiring attention.\n\nExecutive Summary: A single, high-level view of contact centre performance.\nInstant KPI Monitoring: Colour-coded indicators quickly show whether monthly targets have been met.\nBetter Decision Making: Clear performance insights support operational and strategic decisions.\nTrend Analysis: Track performance over time to identify trends, seasonal patterns, and potential issues early."
           ],
-          "image": "/project-contact-center-kpi-performance-project-slide-2.png"
+          "image": ""
         },
         {
           "title": "Agent Operations",
           "description": [
             "This page is designed for team managers, providing detailed visibility into individual agent performance throughout the year. It tracks key metrics, including whether agents are achieving their monthly target of 100 connections and maintaining a conversion rate above 10%.\n\nThe dashboard helps managers recognise top performers, identify agents who need support, and deliver targeted coaching using detailed performance metrics.\n\nPerformance Tracking: Quickly identify which agents are meeting or missing their KPIs.\nTargeted Coaching: Pinpoint areas where individual agents need improvement.\nRecognition: Easily identify high-performing agents for reward and recognition."
           ],
-          "image": "/project-contact-center-kpi-performance-project-slide-3.png"
+          "image": ""
         },
         {
           "title": "Team Operations",
           "description": [
-            "This page gives team leaders a complete view of team performance, allowing them to quickly identify top performers, monitor overall progress, and assess whether team targets are being met—all from a single dashboard.\n\nTeam Overview: View the entire team's performance in one place.\nTarget Tracking: Monitor progress against team KPIs.\nPerformance Comparison: Compare agents to identify gaps and coaching opportunities.\nFaster Decision Making: Save time with a single, consolidated view of team performance."
+            "This page gives team leaders a complete view of team performance, allowing them to quickly identify top performers, monitor overall progress, and assess whether team targets are being metâall from a single dashboard.\n\nTeam Overview: View the entire team's performance in one place.\nTarget Tracking: Monitor progress against team KPIs.\nPerformance Comparison: Compare agents to identify gaps and coaching opportunities.\nFaster Decision Making: Save time with a single, consolidated view of team performance."
           ],
-          "image": "/project-contact-center-kpi-performance-project-slide-4.png"
+          "image": ""
         }
       ],
-      "buildImage": "/project-contact-center-kpi-performance-project-build.png",
+      "buildImage": "",
       "sqlSnippet": "SELECT \nC.date,\nC.offer,\nC.answered,\nC.agent_id,\nC.total_talk,\nC.total_acw,\nC.total_hold,\nC.asa,\nC.abandon,\nC.sla_met,\nC.sla_over,\nS.connection,\nA.agent_name,\nA.team,\nA.effective_start_date,\nA.effective_end_date\nFROM call_stats C\nINNER JOIN connection_stats S ON S.agent_id = C.agent_id AND C.date = S.date\nINNER JOIN agent_info A ON A.agent_id = C.agent_id\nAND C.date >= effective_start_date AND C.date <= A.effective_end_date -- Enables Power BI to report each agent's metrics to the correct team",
-      "sqlDescription": "A key requirement was accurately tracking agents who moved between teams over time. I solved this using effective date logic in the SQL join, ensuring each agent's metrics were always attributed to the correct team for the correct time period — preserving historical accuracy even after team changes.",
+      "sqlDescription": "A key requirement was accurately tracking agents who moved between teams over time. I solved this using effective date logic in the SQL join, ensuring each agent's metrics were always attributed to the correct team for the correct time period â preserving historical accuracy even after team changes.",
       "outcome": [],
-      "outcomeImage": "/project-contact-center-kpi-performance-project-outcome.png",
+      "outcomeImage": "",
       "impact": [],
       "githubUrl": "https://github.com/andoproductionsdata/contact-center-kpi-project",
       "liveUrl": null,
