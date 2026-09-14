@@ -2,7 +2,7 @@
   "profile": {
     "name": "Ando Data Analyst",
     "role": "Data Analyst",
-    "tagline": "Your tagline goes here â a short sentence about what you do and what drives you.",
+    "tagline": "Your tagline goes here Ã¢ÂÂ a short sentence about what you do and what drives you.",
     "email": "your.email@example.com",
     "phone": "0414000000",
     "location": "Melbourne, AU",
@@ -16,7 +16,7 @@
   "about": {
     "bio": "Write a short paragraph about your background, experience, and what makes you a strong data professional.",
     "focus": "Data Analytics & Business Intelligence",
-    "coreStack": "SQL Â· Power BI Â· Python"
+    "coreStack": "SQL ÃÂ· Power BI ÃÂ· Python"
   },
   "technicalSkills": [
     {
@@ -81,7 +81,7 @@
       "title": "Senior Data Analyst",
       "company": "Apex Analytics Group",
       "location": "",
-      "duration": "Jan 2023 â Presen",
+      "duration": "Jan 2023 Ã¢ÂÂ Presen",
       "type": "Full-time",
       "responsibilities": [
         "Lead the design and delivery of enterprise-wide Power BI dashboards used by 200+ stakeholders across operations, finance, and sales.",
@@ -153,15 +153,17 @@
         {
           "title": "Team Operations",
           "description": [
-            "This page gives team leaders a complete view of team performance, allowing them to quickly identify top performers, monitor overall progress, and assess whether team targets are being metâall from a single dashboard.\n\nTeam Overview: View the entire team's performance in one place.\nTarget Tracking: Monitor progress against team KPIs.\nPerformance Comparison: Compare agents to identify gaps and coaching opportunities.\nFaster Decision Making: Save time with a single, consolidated view of team performance."
+            "This page gives team leaders a complete view of team performance, allowing them to quickly identify top performers, monitor overall progress, and assess whether team targets are being metÃ¢ÂÂall from a single dashboard.\n\nTeam Overview: View the entire team's performance in one place.\nTarget Tracking: Monitor progress against team KPIs.\nPerformance Comparison: Compare agents to identify gaps and coaching opportunities.\nFaster Decision Making: Save time with a single, consolidated view of team performance."
           ],
           "image": ""
         }
       ],
       "buildImage": "",
       "sqlSnippet": "SELECT \nC.date,\nC.offer,\nC.answered,\nC.agent_id,\nC.total_talk,\nC.total_acw,\nC.total_hold,\nC.asa,\nC.abandon,\nC.sla_met,\nC.sla_over,\nS.connection,\nA.agent_name,\nA.team,\nA.effective_start_date,\nA.effective_end_date\nFROM call_stats C\nINNER JOIN connection_stats S ON S.agent_id = C.agent_id AND C.date = S.date\nINNER JOIN agent_info A ON A.agent_id = C.agent_id\nAND C.date >= effective_start_date AND C.date <= A.effective_end_date -- Enables Power BI to report each agent's metrics to the correct team",
-      "sqlDescription": "A key requirement was accurately tracking agents who moved between teams over time. I solved this using effective date logic in the SQL join, ensuring each agent's metrics were always attributed to the correct team for the correct time period â preserving historical accuracy even after team changes.",
-      "outcome": [],
+      "sqlDescription": "A key requirement was accurately tracking agents who moved between teams over time. I solved this using effective date logic in the SQL join, ensuring each agent's metrics were always attributed to the correct team for the correct time period Ã¢ÂÂ preserving historical accuracy even after team changes.",
+      "outcome": [
+        "Test"
+      ],
       "outcomeImage": "",
       "impact": [],
       "githubUrl": "https://github.com/andoproductionsdata/contact-center-kpi-project",
